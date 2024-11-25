@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ item.name }} - Feedback</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ item.name }}</h1>
+            <p class="average-rating">Average Rating: {{ average_rating }}</p>
+        </header>
+
+        <main>
+            <section class="feedback-list">
+                <h2>Feedback</h2>
+                <ul>
+                    {% for feedback in feedbacks %}
+                        <li class="feedback-item">
+                            <div class="feedback-header">
+                                <strong>Rating:</strong> {{ feedback.rating }}
+                            </div>
+                            <div class="feedback-comment">
+                                <strong>Comment:</strong> {{ feedback.comment }}
+                            </div>
+                            <small class="feedback-date">Submitted on {{ feedback.created_at }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="submit-feedback">
+                <h2>Submit Feedback</h2>
+                <form method="post" class="feedback-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="submit-button">Submit Feedback</button>
+                </form>
+            </section>
+
+            <footer>
+                <a href="{% url 'home' %}" class="back-home">Back to Home</a>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
+
+
+

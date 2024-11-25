@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Feedback System</h1>
+        </header>
+
+        <main>
+            <h2>Items Available for Feedback</h2>
+            <ul class="item-list">
+                {% for item in items %}
+                    <li class="item">
+                        <a href="{% url 'item_detail' item.id %}" class="item-link">{{ item.name }}</a>
+                    </li>
+                {% empty %}
+                    <li>No items available.</li>
+                {% endfor %}
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
+
