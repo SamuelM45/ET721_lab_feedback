@@ -121,7 +121,7 @@ label {
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-bottom: 20px;
-    align-self: center; /* Center the comment box */
+    align-self: center;
 }
 
 .submit-button {
@@ -149,17 +149,17 @@ footer {
 .back-home {
     text-decoration: none;
     color: #007bff;
-    font-size: 1.5rem; /* Increase font size */
-    font-weight: bold; /* Make the text bold */
-    padding: 10px 20px; /* Add padding for larger clickable area */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    display: inline-block; /* Allow padding to apply properly */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 20px; /* Add some spacing from the rest of the page */
+    margin-top: 20px;
 }
 
 .back-home:hover {
     text-decoration: none;
-    background-color: #f1f1f1; /* Light background color on hover */
-    color: #0056b3; /* Darker color when hovered */
+    background-color: #f1f1f1; 
+    color: #0056b3;
 }
