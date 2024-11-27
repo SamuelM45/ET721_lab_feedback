@@ -7,29 +7,27 @@ This is a simple feedback system built with Django. Users can submit feedback fo
 - Average rating is displayed on the item detail page.
 - Admin can add items and feedback via the Django admin panel.
 
-## Setup and Installation
-
 ## Create and activate a virtual environment
 ```bash
 python3 -m venv myvirtual
 source myVirtual/bin/activate
 ```
-##Install Django
+## Install Django
 Within the activated virtual environment, install Django.
 ```bash
 pip install django
 ```
-##Create a new Django project: Create a project named feedbackproject.
+## Create a new Django project: Create a project named feedbackproject.
 ```bash
 django-admin startproject feedbackproject .
 cd feedbackproject
 ```
-##Create a Django app called feedback
+## Create a Django app called feedback
 Inside the feedbackproject directory, create the app.
 ```bash
 python manage.py startapp feedback
 ```
-##Configure settings
+## Configure settings
 Open feedbackproject/settings.py
 Add feedback to the INSTALLED_APPS list:
 ```pyton
@@ -38,13 +36,13 @@ INSTALLED_APPS = [
     'feedback',
 ]
 ```
-##Run server test
+## Run server test
 Verify that the project is set up correctly by running the Django development server.
 ```bash
 python manage.py runserver
 ```
 
-##Define the Model 
+## Define the Model 
 Define the **Item** and **Feedback** models: Open **feedback/models.py** and define the models.
 ```python
 from django.db import models
@@ -66,13 +64,13 @@ class Feedback(models.Model):
         # Return a string representation of the feedback
         pass
 ```
-##Run migrations
+## Run migrations
 Create and apply migrations to update the database schema.
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
-##Create Forms
+## Create Forms
 Create a form for feedback submission: In **feedback/forms.py**, create the **FeedbackForm** to handle feedback submission.
 ```python
 from django import forms
@@ -89,8 +87,7 @@ class FeedbackForm(forms.ModelForm):
         # Example: Get the rating from cleaned_data and perform validation
         pass
 ```
-
-##Develop Views
+## Develop Views
 Create views for displaying item details and handling feedback: Open feedback/views.py and define the necessary views.
 ```python
 from django.shortcuts import render, get_object_or_404, redirect
@@ -136,7 +133,7 @@ def item_detail(request, item_id):
     # Render the item detail page with feedbacks and the form
     return render(request, 'feedback/item_detail.html', context)
 ```
-##Design Templates
+## Design Templates
 Create a template to display the item and its feedback: Create the item_detail.html template in **feedback/templates/feedback/**.
 
 ```HTML
@@ -168,7 +165,7 @@ Create a template to display the item and its feedback: Create the item_detail.h
 </body>
 </html>
 ```
-##Configure URLs
+## Configure URLs
 Define URL patterns for views: Open **feedback/urls.py** and define the necessary URL patterns.
 
 ```python
