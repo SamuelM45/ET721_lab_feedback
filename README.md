@@ -10,36 +10,39 @@ This is a simple feedback system built with Django. Users can submit feedback fo
 ## Setup and Installation
 
 ## Create and activate a virtual environment
-
+```bash
 python3 -m venv myvirtual
 source myVirtual/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-##Install Django: 
+```
+##Install Django
 Within the activated virtual environment, install Django.
-
+```bash
 pip install django
-
+```
 ## Create a new Django project: Create a project named feedbackproject.
+```bash
 django-admin startproject feedbackproject .
 cd feedbackproject
-
-## Create a Django app called feedback:
+```
+## Create a Django app called feedback
 Inside the feedbackproject directory, create the app.
-
+```bash
 python manage.py startapp feedback
-
-## Configure settings:
-
-Open feedbackproject/settings.py.
+```
+## Configure settings
+Open feedbackproject/settings.py
 Add feedback to the INSTALLED_APPS list:
-
+```pyton
 INSTALLED_APPS = [
-    `Other apps...`
+    # Other apps...
     'feedback',
 ]
-
-
-
+```
+## Run server test
+Verify that the project is set up correctly by running the Django development server.
+```bash
+python manage.py runserver
+```
 
 ```bash
 git clone https://github.com/yourusername/ET721_lab_feedback.git
