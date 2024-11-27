@@ -19,17 +19,17 @@ Within the activated virtual environment, install Django.
 ```bash
 pip install django
 ```
-## Create a new Django project: Create a project named feedbackproject.
+##Create a new Django project: Create a project named feedbackproject.
 ```bash
 django-admin startproject feedbackproject .
 cd feedbackproject
 ```
-## Create a Django app called feedback
+##Create a Django app called feedback
 Inside the feedbackproject directory, create the app.
 ```bash
 python manage.py startapp feedback
 ```
-## Configure settings
+##Configure settings
 Open feedbackproject/settings.py
 Add feedback to the INSTALLED_APPS list:
 ```pyton
@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'feedback',
 ]
 ```
-## Run server test
+##Run server test
 Verify that the project is set up correctly by running the Django development server.
 ```bash
 python manage.py runserver
 ```
 
-## Define the Model 
+##Define the Model 
 Define the **Item** and **Feedback** models: Open **feedback/models.py** and define the models.
 ```python
 from django.db import models
