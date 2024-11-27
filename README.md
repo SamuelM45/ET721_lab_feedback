@@ -210,8 +210,5 @@ python manage.py createsuperuser
 
 ## Usage
 - As an admin, you can create items and add feedback via the Django admin panel.
-- Users can view an item's detail page, see the average rating, and submit feedback.
+- Users can view an item's detail page, see the average rating, and submit feedback
 
-```bash
-git clone https://github.com/yourusername/ET721_lab_feedback.git
-cd ET721_lab_feedback
