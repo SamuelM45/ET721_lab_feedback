@@ -1,5 +1,5 @@
 # ET721_lab_feedback2
-This is a simple feedback system built with Django. Users can submit feedback for specific items (e.g., products or articles), including a rating and a comment. The system displays average ratings and lists feedback for each item.
+This is a simple feedback system built with Django. Users can submit feedback for specific items, including a rating and a comment. The system displays average ratings and lists feedback for each item.
 
 ## Features
 - Users can view items and their feedback.
@@ -186,6 +186,18 @@ urlpatterns = [
     path('', include('feedback.urls')),
 ]
 ```
+
+## Test and Deploy the System
+Add items via the Django admin
+- Register your models in **feedback/admin.py**:
+```python
+from django.contrib import admin
+from .models import Item, Feedback
+
+admin.site.register(Item)
+admin.site.register(Feedback)
+```
+
 
 ```bash
 git clone https://github.com/yourusername/ET721_lab_feedback.git
